@@ -89,6 +89,11 @@ namespace Desktop.Forms.Order
 
         private void OrderDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            OrdersDataGridRowSelect();
+        }
+
+        private void OrdersDataGridRowSelect()
+        {
             this.CurrentOrderId = Convert.ToInt32(this.orderDataGridView.SelectedRows[0].Cells[0].Value);
 
             if (this.CurrentOrderId < 1)
@@ -282,7 +287,7 @@ namespace Desktop.Forms.Order
 
         private void refreshBookFields(int bookId)
         {
-            if (bookId != null && bookId != 0)
+            if (bookId != 0)
             {
                 base.Data = new OrdersSystem.Data.OrdersEntities();
                 this.book = base.Data.Books.FirstOrDefault(x => x.BookId == bookId);
@@ -467,6 +472,47 @@ namespace Desktop.Forms.Order
             }
 
             this.booksDataGridView.Refresh();
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+            var bookId = Convert.ToInt32(this.booksDataGridView.SelectedRows[0].Cells[0].Value);
+            refreshBookFields(bookId);
+        }
+
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+            var bookId = Convert.ToInt32(this.booksDataGridView.SelectedRows[0].Cells[0].Value);
+            refreshBookFields(bookId);
+        }
+
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+            var bookId = Convert.ToInt32(this.booksDataGridView.SelectedRows[0].Cells[0].Value);
+            refreshBookFields(bookId);
+        }
+
+        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        {
+            var bookId = Convert.ToInt32(this.booksDataGridView.SelectedRows[0].Cells[0].Value);
+            refreshBookFields(bookId);
+        }
+
+        private void booksDataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (booksDataGridView.SelectedRows.Count > 0)
+            {
+                var bookId = Convert.ToInt32(this.booksDataGridView.SelectedRows[0].Cells[0].Value);
+                refreshBookFields(bookId);
+            }
+        }
+
+        private void orderDataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.orderDataGridView.SelectedRows.Count > 0)
+            {
+                OrdersDataGridRowSelect();
+            }
         }
 
     }

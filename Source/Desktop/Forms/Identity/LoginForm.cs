@@ -47,6 +47,8 @@ namespace Desktop.Forms
                     menuForm.LogInToolStripMenuItem.Visible = false;
                     menuForm.LogoutToolStripMenuItem.Visible = true;
                     menuForm.TransportsToolStripMenuItem.Visible = true;
+                    menuForm.ReportsToolStripMenuItem.Visible = true;
+
                 }
                 
                 MessageBox.Show("Login Successful!", "Success",

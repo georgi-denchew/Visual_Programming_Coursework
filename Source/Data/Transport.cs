@@ -21,7 +21,7 @@ namespace OrdersSystem.Data
     
         public int TransportId { get; set; }
         public System.DateTime StartOffDate { get; set; }
-        public Nullable<System.DateTime> ModificationDate { get; set; }
+        public System.DateTime ModificationDate { get; set; }
     
         public virtual ICollection<Order> Orders { get; set; }
     }

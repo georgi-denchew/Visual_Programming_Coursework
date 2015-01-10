@@ -85,6 +85,7 @@ namespace Desktop.Forms.Common
 
             this.LogoutToolStripMenuItem.Visible = false;
             this.TransportsToolStripMenuItem.Visible = false;
+            this.ReportsToolStripMenuItem.Visible = false;
             this.LogInToolStripMenuItem.Visible = true;
         }
 
@@ -180,6 +181,22 @@ namespace Desktop.Forms.Common
                     childForm.Focus();
                 }
             }
+        }
+
+        private void myTransportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports.MyTransportsReport myTransportsReport = new Reports.MyTransportsReport();
+            myTransportsReport.Show();
+        }
+
+        private void myOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

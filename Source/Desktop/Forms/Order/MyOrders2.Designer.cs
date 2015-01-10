@@ -131,6 +131,7 @@ namespace Desktop.Forms.Order
             this.orderDataGridView.Size = new System.Drawing.Size(907, 242);
             this.orderDataGridView.TabIndex = 1;
             this.orderDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderDataGridView_CellContentClick);
+            this.orderDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.orderDataGridView_RowEnter);
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -246,6 +247,7 @@ namespace Desktop.Forms.Order
             this.booksDataGridView.TabIndex = 2;
             this.booksDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.booksDataGridView_CellClick);
             this.booksDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.booksDataGridView_DataError);
+            this.booksDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.booksDataGridView_RowEnter);
             // 
             // bookIdDataGridViewTextBoxColumn
             // 
@@ -385,6 +387,7 @@ namespace Desktop.Forms.Order
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -394,6 +397,7 @@ namespace Desktop.Forms.Order
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -422,6 +426,7 @@ namespace Desktop.Forms.Order
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
+            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -431,6 +436,7 @@ namespace Desktop.Forms.Order
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
+            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
             // 
             // bindingNavigatorSeparator2
             // 
@@ -491,7 +497,7 @@ namespace Desktop.Forms.Order
             this.textBoxOrderedCount.Name = "textBoxOrderedCount";
             this.textBoxOrderedCount.Size = new System.Drawing.Size(136, 31);
             this.textBoxOrderedCount.TabIndex = 4;
-            this.toolTipOrderedCount.SetToolTip(textBoxOrderedCount, "Edited book ordered count");
+            this.toolTipOrderedCount.SetToolTip(this.textBoxOrderedCount, "Edited book ordered count");
             // 
             // textBoxTitle
             // 
@@ -499,7 +505,7 @@ namespace Desktop.Forms.Order
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(136, 31);
             this.textBoxTitle.TabIndex = 3;
-            this.toolTipTitle.SetToolTip(textBoxTitle, "Edited book title");
+            this.toolTipTitle.SetToolTip(this.textBoxTitle, "Edited book title");
             // 
             // textBoxISBN
             // 
@@ -507,7 +513,7 @@ namespace Desktop.Forms.Order
             this.textBoxISBN.Name = "textBoxISBN";
             this.textBoxISBN.Size = new System.Drawing.Size(136, 31);
             this.textBoxISBN.TabIndex = 4;
-            this.toolTipISBN.SetToolTip(textBoxISBN, "Edited book ISBN");
+            this.toolTipISBN.SetToolTip(this.textBoxISBN, "Edited book ISBN");
             // 
             // button1
             // 

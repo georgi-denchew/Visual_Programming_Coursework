@@ -33,6 +33,10 @@ namespace Desktop.Forms.Common
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myTransportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemWindows = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tileHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +55,7 @@ namespace Desktop.Forms.Common
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logInToolStripMenuItem,
             this.transportsToolStripMenuItem,
+            this.reportsToolStripMenuItem,
             this.toolStripMenuItemWindows,
             this.ToolStripMenuItemHelp,
             this.logoutToolStripMenuItem});
@@ -75,6 +80,38 @@ namespace Desktop.Forms.Common
             this.transportsToolStripMenuItem.Text = "Transports";
             this.transportsToolStripMenuItem.Visible = false;
             this.transportsToolStripMenuItem.Click += new System.EventHandler(this.transportsToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myTransportsToolStripMenuItem,
+            this.myOrdersToolStripMenuItem,
+            this.myBooksToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 19);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            this.reportsToolStripMenuItem.Visible = false;
+            // 
+            // myTransportsToolStripMenuItem
+            // 
+            this.myTransportsToolStripMenuItem.Name = "myTransportsToolStripMenuItem";
+            this.myTransportsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.myTransportsToolStripMenuItem.Text = "My Transports";
+            this.myTransportsToolStripMenuItem.Click += new System.EventHandler(this.myTransportsToolStripMenuItem_Click);
+            // 
+            // myOrdersToolStripMenuItem
+            // 
+            this.myOrdersToolStripMenuItem.Name = "myOrdersToolStripMenuItem";
+            this.myOrdersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.myOrdersToolStripMenuItem.Text = "My Orders";
+            this.myOrdersToolStripMenuItem.Click += new System.EventHandler(this.myOrdersToolStripMenuItem_Click);
+            // 
+            // myBooksToolStripMenuItem
+            // 
+            this.myBooksToolStripMenuItem.Name = "myBooksToolStripMenuItem";
+            this.myBooksToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.myBooksToolStripMenuItem.Text = "My Books";
+            this.myBooksToolStripMenuItem.Click += new System.EventHandler(this.myBooksToolStripMenuItem_Click);
             // 
             // toolStripMenuItemWindows
             // 
@@ -172,6 +209,10 @@ namespace Desktop.Forms.Common
         private ToolStripMenuItem logoutToolStripMenuItem;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem transportsToolStripMenuItem;
+        private ToolStripMenuItem reportsToolStripMenuItem;
+        private ToolStripMenuItem myTransportsToolStripMenuItem;
+        private ToolStripMenuItem myOrdersToolStripMenuItem;
+        private ToolStripMenuItem myBooksToolStripMenuItem;
 
         
         public ToolStripMenuItem LogInToolStripMenuItem
@@ -195,6 +236,14 @@ namespace Desktop.Forms.Common
             get
             {
                 return this.transportsToolStripMenuItem;
+            }
+        }
+
+        public ToolStripMenuItem ReportsToolStripMenuItem
+        {
+            get
+            {
+                return this.reportsToolStripMenuItem;
             }
         }
     }
