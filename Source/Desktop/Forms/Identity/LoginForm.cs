@@ -37,6 +37,23 @@ namespace Desktop.Forms
 
                 new ErrorProvider().SetError(this.buttonLogin, InvalidUser);
             }
+            else
+            {
+                UserInfo.UserId = user.UserId;
+
+                if (this.MdiParent is MenuForm)
+                {
+                    var menuForm = (this.MdiParent as MenuForm);
+                    menuForm.LogInToolStripMenuItem.Visible = false;
+                    menuForm.LogoutToolStripMenuItem.Visible = true;
+                    menuForm.TransportsToolStripMenuItem.Visible = true;
+                }
+                
+                MessageBox.Show("Login Successful!", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+            }
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)

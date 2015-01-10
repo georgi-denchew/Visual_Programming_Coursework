@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.labelLastName = new System.Windows.Forms.Label();
@@ -40,6 +41,11 @@
             this.labelConfirmPassword = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
+            this.toolTipUsername = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipPassword = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipConfirmPassword = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipFirstName = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipLastName = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBoxConfirmPassword
@@ -50,6 +56,7 @@
             this.textBoxConfirmPassword.PasswordChar = '*';
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(274, 31);
             this.textBoxConfirmPassword.TabIndex = 3;
+            this.toolTipConfirmPassword.SetToolTip(textBoxConfirmPassword, "Confirm Password");
             // 
             // textBoxLastName
             // 
@@ -58,6 +65,7 @@
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(280, 31);
             this.textBoxLastName.TabIndex = 5;
+            this.toolTipLastName.SetToolTip(textBoxLastName, "Enter Last Name");
             // 
             // labelLastName
             // 
@@ -110,6 +118,8 @@
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(280, 31);
             this.textBoxFirstName.TabIndex = 4;
+            this.toolTipFirstName.SetToolTip(textBoxFirstName, "Enter First Name");
+
             // 
             // textBoxPassword
             // 
@@ -119,6 +129,8 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(274, 31);
             this.textBoxPassword.TabIndex = 2;
+            this.toolTipPassword.SetToolTip(textBoxPassword, "Enter Password");
+
             // 
             // textBoxUsername
             // 
@@ -127,6 +139,8 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(274, 31);
             this.textBoxUsername.TabIndex = 1;
+            this.toolTipUsername.SetToolTip(textBoxUsername, "Enter Username");
+
             // 
             // labelConfirmPassword
             // 
@@ -199,5 +213,10 @@
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxConfirmPassword;
+        private System.Windows.Forms.ToolTip toolTipUsername;
+        private System.Windows.Forms.ToolTip toolTipPassword;
+        private System.Windows.Forms.ToolTip toolTipConfirmPassword;
+        private System.Windows.Forms.ToolTip toolTipFirstName;
+        private System.Windows.Forms.ToolTip toolTipLastName;
     }
 }

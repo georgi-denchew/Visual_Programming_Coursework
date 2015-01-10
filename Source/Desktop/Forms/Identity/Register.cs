@@ -74,16 +74,17 @@ namespace Desktop.Forms.Identity
 
             if (!hasErrors)
             {
-                User newUser = new User()
-                {
-                    FirstName = firstName,
-                    LastName = lastName,
-                    Password = password,
-                    Username = username,
-                    ModificationDate = DateTime.Now
-                };
+                //User newUser = new User()
+                //{
+                //    FirstName = firstName,
+                //    LastName = lastName,
+                //    Password = password,
+                //    Username = username,
+                //    ModificationDate = DateTime.Now
+                //};
 
-                base.Data.Users.Add(newUser);
+                //base.Data.Users.Add(newUser);
+                base.Data.insertUser(username, password, firstName, lastName);
                 base.Data.SaveChanges();
 
                 LoginForm loginForm = new LoginForm();

@@ -29,12 +29,15 @@ namespace Desktop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
+            this.toolTipUsername = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipPassword = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // labelUsername
@@ -56,6 +59,7 @@ namespace Desktop.Forms
             this.labelPassword.Size = new System.Drawing.Size(112, 25);
             this.labelPassword.TabIndex = 0;
             this.labelPassword.Text = "Password:";
+
             // 
             // textBoxUsername
             // 
@@ -64,6 +68,7 @@ namespace Desktop.Forms
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(201, 31);
             this.textBoxUsername.TabIndex = 1;
+            this.toolTipUsername.SetToolTip(textBoxUsername, "Enter Username");
             // 
             // buttonLogin
             // 
@@ -85,6 +90,7 @@ namespace Desktop.Forms
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(201, 31);
             this.textBoxPassword.TabIndex = 2;
+            this.toolTipPassword.SetToolTip(textBoxPassword, "Enter Password");
             // 
             // buttonRegister
             // 
@@ -100,7 +106,8 @@ namespace Desktop.Forms
             // 
             // LoginForm
             // 
-
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.ClientSize = new System.Drawing.Size(365, 210);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.buttonLogin);
@@ -122,6 +129,8 @@ namespace Desktop.Forms
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonRegister;
+        private ToolTip toolTipUsername;
+        private ToolTip toolTipPassword;
 
         public TextBox TextBoxUsername
         {

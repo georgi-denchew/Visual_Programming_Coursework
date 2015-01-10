@@ -83,11 +83,51 @@
     <Compile Include="Forms\Identity\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Identity\UserInfo.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\AddEditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\AddEditOrder.Designer.cs">
+      <DependentUpon>AddEditOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\MyOrders2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\MyOrders2.Designer.cs">
+      <DependentUpon>MyOrders2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\SearchMyBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\SearchMyBooks.Designer.cs">
+      <DependentUpon>SearchMyBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\SearchMyOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\SearchMyOrders.Designer.cs">
+      <DependentUpon>SearchMyOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transport\AllTransports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transport\AllTransports.Designer.cs">
+      <DependentUpon>AllTransports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet.cs">
+      <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrdersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +149,21 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\AddEditOrder.resx">
+      <DependentUpon>AddEditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\MyOrders2.resx">
+      <DependentUpon>MyOrders2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\SearchMyBooks.resx">
+      <DependentUpon>SearchMyBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\SearchMyOrders.resx">
+      <DependentUpon>SearchMyOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transport\AllTransports.resx">
+      <DependentUpon>AllTransports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -118,7 +173,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="OrdersDataSet.xsc">
+      <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet.xss">
+      <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\OrdersSystem.Data.Book.datasource" />
+    <None Include="Properties\DataSources\OrdersSystem.Data.Order.datasource" />
+    <None Include="Properties\DataSources\OrdersSystem.Data.Transport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
