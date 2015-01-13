@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Desktop", "Desktop\OrdersSystem.Desktop.csproj", "{C5CAF013-D645-4365-B688-B74C0DE9AF4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop", "Desktop\Desktop.csproj", "{C5CAF013-D645-4365-B688-B74C0DE9AF4C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Data", "Data\OrdersSystem.Data.csproj", "{7A8E30D7-5B8B-43E4-98CA-FDD9CA51FAFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportsProject", "ReportsProject\ReportsProject.csproj", "{C8C84D44-C1B3-4C8A-BB79-84BBB3D1551A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7A8E30D7-5B8B-43E4-98CA-FDD9CA51FAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A8E30D7-5B8B-43E4-98CA-FDD9CA51FAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A8E30D7-5B8B-43E4-98CA-FDD9CA51FAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C84D44-C1B3-4C8A-BB79-84BBB3D1551A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C84D44-C1B3-4C8A-BB79-84BBB3D1551A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C84D44-C1B3-4C8A-BB79-84BBB3D1551A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C84D44-C1B3-4C8A-BB79-84BBB3D1551A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

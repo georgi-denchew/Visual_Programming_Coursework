@@ -123,10 +123,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrystalReportTest.cs">
+    <Compile Include="CrystalReport1.cs">
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReportBooks.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReportTest.rpt</DependentUpon>
+      <DependentUpon>CrystalReportBooks.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportOrders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportOrders.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\About.cs">
@@ -178,6 +190,18 @@
     <Compile Include="Forms\Order\MyOrders2.Designer.cs">
       <DependentUpon>MyOrders2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reports\MyBooksReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MyBooksReport.Designer.cs">
+      <DependentUpon>MyBooksReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\MyOrdersReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MyOrdersReport.Designer.cs">
+      <DependentUpon>MyOrdersReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Reports\MyTransportsReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,9 +237,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CrystalReportTest.rpt">
+    <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReportTest.cs</LastGenOutput>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportBooks.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBooks.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportOrders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportOrders.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\About.resx">
       <DependentUpon>About.cs</DependentUpon>
@@ -240,6 +272,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Order\MyOrders2.resx">
       <DependentUpon>MyOrders2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MyBooksReport.resx">
+      <DependentUpon>MyBooksReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MyOrdersReport.resx">
+      <DependentUpon>MyOrdersReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports\MyTransportsReport.resx">
       <DependentUpon>MyTransportsReport.cs</DependentUpon>

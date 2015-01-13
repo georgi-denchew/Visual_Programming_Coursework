@@ -191,12 +191,14 @@ namespace Desktop.Forms.Common
 
         private void myOrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Reports.MyOrdersReport myOrdersReport = new Reports.MyOrdersReport();
+            myOrdersReport.Show();
         }
 
         private void myBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Reports.MyBooksReport myBooksReport = new Reports.MyBooksReport();
+            myBooksReport.Show();
         }
     }
 }

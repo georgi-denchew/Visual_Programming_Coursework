@@ -23,7 +23,7 @@ namespace OrdersSystem.Data
         public string DeliveryAddress { get; set; }
         public string Country { get; set; }
         public int UserId { get; set; }
-        public Nullable<System.DateTime> ModificationDate { get; set; }
+        public System.DateTime ModificationDate { get; set; }
         public int TransportId { get; set; }
     
         public virtual ICollection<Book> Books { get; set; }

@@ -18,7 +18,7 @@ namespace OrdersSystem.Data
         public string Title { get; set; }
         public string ISBN { get; set; }
         public int OrderedCount { get; set; }
-        public Nullable<System.DateTime> ModificationDate { get; set; }
+        public System.DateTime ModificationDate { get; set; }
         public int OrderId { get; set; }
         public int UserId { get; set; }
     

@@ -18,7 +18,7 @@ namespace OrdersSystem.Data
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Nullable<System.DateTime> ModificationDate { get; set; }
+        public System.DateTime ModificationDate { get; set; }
         public string Username { get; set; }
     }
 }
