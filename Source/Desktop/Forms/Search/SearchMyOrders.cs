@@ -16,6 +16,8 @@ namespace Desktop.Forms.Search
         public SearchMyOrders()
         {
             InitializeComponent();
+
+            this.comboBoxBeforeAfter.SelectedIndex = 0;
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)

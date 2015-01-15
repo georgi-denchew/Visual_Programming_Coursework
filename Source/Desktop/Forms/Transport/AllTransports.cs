@@ -69,11 +69,8 @@ namespace Desktop.Forms.Transport
         {
             int transportId = Convert.ToInt32(this.dataGridViewTransports.SelectedRows[0].Cells[0].Value);
             UserInfo.CurrentTransportId = transportId;
-            
-            MyOrders2 myOrders = new MyOrders2();
-            myOrders.MdiParent = this.MdiParent;
-            myOrders.Show();
 
+            (this.MdiParent as MenuForm).OpenOrdersAndBooks();
         }
     }
 }

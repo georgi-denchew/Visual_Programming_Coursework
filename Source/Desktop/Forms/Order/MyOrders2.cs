@@ -191,54 +191,64 @@ namespace Desktop.Forms.Order
         {
             bool hasErrors = false;
 
-            for (int i = 0; i < this.booksDataGridView.Rows.Count - 1; i++)
+            if (this.CurrentOrderId == 0)
             {
-                DataGridViewRow row = this.booksDataGridView.Rows[i];
+                hasErrors = true;
+                MessageBox.Show("Please select an order first!", "No order selected!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                DataGridViewCell bookIdCell = row.Cells[booksDataGridView.Columns[0].Index];
-                DataGridViewCell titleCell = row.Cells[booksDataGridView.Columns[1].Index];
-                DataGridViewCell isbnCell = row.Cells[booksDataGridView.Columns[2].Index];
-                DataGridViewCell orderedCountCell = row.Cells[booksDataGridView.Columns[3].Index];
+            }
+            else
+            {
 
-                int bookId = Convert.ToInt32(bookIdCell.Value);
-
-                if (bookId != 0)
+                for (int i = 0; i < this.booksDataGridView.Rows.Count - 1; i++)
                 {
-                    continue;
-                }
+                    DataGridViewRow row = this.booksDataGridView.Rows[i];
 
-                try
-                {
-                    bool isValidTitle = titleCell.Value != null && !string.IsNullOrWhiteSpace(titleCell.Value.ToString());
-                    bool isValidISBN = isbnCell.Value != null && !string.IsNullOrWhiteSpace(isbnCell.Value.ToString());
+                    DataGridViewCell bookIdCell = row.Cells[booksDataGridView.Columns[0].Index];
+                    DataGridViewCell titleCell = row.Cells[booksDataGridView.Columns[1].Index];
+                    DataGridViewCell isbnCell = row.Cells[booksDataGridView.Columns[2].Index];
+                    DataGridViewCell orderedCountCell = row.Cells[booksDataGridView.Columns[3].Index];
 
-                    int orderedCount;
+                    int bookId = Convert.ToInt32(bookIdCell.Value);
 
-                    bool isValidCount = int.TryParse(orderedCountCell.Value.ToString(), out orderedCount);
-
-                    if (!isValidCount || orderedCount <= 0)
+                    if (bookId != 0)
                     {
-                        MessageBox.Show("OrderedCount field requires a positive integer number!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        hasErrors = true;
+                        continue;
                     }
 
-                    if (!isValidTitle)
+                    try
                     {
-                        titleCell.ErrorText = "This field is required!";
-                        MessageBox.Show("Title field is required!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        hasErrors = true;
-                    }
+                        bool isValidTitle = titleCell.Value != null && !string.IsNullOrWhiteSpace(titleCell.Value.ToString());
+                        bool isValidISBN = isbnCell.Value != null && !string.IsNullOrWhiteSpace(isbnCell.Value.ToString());
 
-                    if (!isValidISBN)
+                        int orderedCount;
+
+                        bool isValidCount = int.TryParse(orderedCountCell.Value.ToString(), out orderedCount);
+
+                        if (!isValidCount || orderedCount <= 0)
+                        {
+                            MessageBox.Show("OrderedCount field requires a positive integer number!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            hasErrors = true;
+                        }
+
+                        if (!isValidTitle)
+                        {
+                            titleCell.ErrorText = "This field is required!";
+                            MessageBox.Show("Title field is required!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            hasErrors = true;
+                        }
+
+                        if (!isValidISBN)
+                        {
+                            isbnCell.ErrorText = "This field is required!";
+                            MessageBox.Show("ISBN field is required!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            hasErrors = true;
+                        }
+                    }
+                    catch (NullReferenceException exception)
                     {
-                        isbnCell.ErrorText = "This field is required!";
-                        MessageBox.Show("ISBN field is required!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        hasErrors = true;
-                    }
-                }
-                catch (NullReferenceException exception)
-                {
 
+                    }
                 }
             }
             return hasErrors;

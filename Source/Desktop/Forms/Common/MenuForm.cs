@@ -147,6 +147,21 @@ namespace Desktop.Forms.Common
             addEditOrder.Show();
         }
 
+        internal void OpenOrdersAndBooks()
+        {
+            foreach (var childForm in this.MdiChildren)
+            {
+                if (childForm is Order.MyOrders2)
+                {
+                    (childForm as Order.MyOrders2).Close();
+                }
+            }
+
+            Order.MyOrders2 addEditOrder = new Order.MyOrders2();
+            addEditOrder.MdiParent = this;
+            addEditOrder.Show();
+        }
+
         internal void OpenOrdersSearch()
         {
             Search.SearchMyOrders searchMyOrders = new Search.SearchMyOrders();

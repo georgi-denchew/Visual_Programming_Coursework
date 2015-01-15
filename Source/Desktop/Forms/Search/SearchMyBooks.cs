@@ -16,6 +16,8 @@ namespace Desktop.Forms.Search
         public SearchMyBooks()
         {
             InitializeComponent();
+
+            this.comboBoxBeforeAfter.SelectedIndex = 0;
         }
 
         private void dateTimePickerModificationDate_ValueChanged(object sender, EventArgs e)
